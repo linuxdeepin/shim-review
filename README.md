@@ -38,6 +38,48 @@ Who is the primary contact for security updates, etc.
 - Name: Yan Bowen
 - Position: Elder Developer
 - Email address: yanbowen@uniontech.com
+- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the Linux community
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+AhUmqPmm0Iw8txIXbw==
+=bv4a
+-----END PGP PUBLIC KEY BLOCK-----
 
 -------------------------------------------------------------------------------
 Who is the secondary contact for security updates, etc.
@@ -45,6 +87,85 @@ Who is the secondary contact for security updates, etc.
 - Name: Li Chenggang
 - Position: Developer
 - Email address: lichenggang@uniontech.com
+- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the Linux community
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQGNBGCCeLQBDACb/jqaP4Dmm0PcgqiBnFTksUwydcSX/A7B3y5DwelhXYxnkC61
+KvLAYgPtlFGYkMZlJ/nDsSdjKBInq/NJ2sTiNsdzyegBhIc27PEp6axndO3BgHnK
+9sHCC/vH9XWxCNKBDS8stxsewPacjcMAQ3L4aeCcrr+0krpDc64sDU4zUdB2GlkG
+2ep+j/iSXUOSEbvnLbL99azytNYEiYbft+sQqFR6HxM95RCUSlQa4muniiTQtpHF
+W5keWb/bN+PonoLICzVnR1FnS57y+dsAl5mubxh9Q7ugzzGVJN8+/KUA4MOJ4Zp4
+DYKcx5tK5UuVyklJCI927VoxHz84i8BiKO8d6lOyB8H1AFUNO2Gn6WtVmdLUu8Qq
+I9mdcsIHLtSDJmFyzv/Y/illkEhE3gcaiQe4LUFjmQoKGxWOyxYX/z3OB9o4k8eh
+v8IxRCn8we0R5JhAad24l1S/b3+hDz2oFUUY6Qduvyk533Af1yxx/8ASbucKjJlg
+aLsv7fEk9ZjPrA8AEQEAAbQnbGljaGVuZ2dhbmcgPGxpY2hlbmdnYW5nQHVuaW9u
+dGVjaC5jb20+iQHUBBMBCgA+FiEEPIrRozsv7i/w81FI++yGqgmIBKQFAmCCeLQC
+GwMFCQPCZwAFCwkIBwIGFQoJCAsCBBYCAwECHgECF4AACgkQ++yGqgmIBKTQywv8
+CRAKKcAE61SX8BK6cupLyjAwEh/AgilYvZrAlrwceRMFruEMGQcU1YkjusKAizwQ
+jKF8mJQHV/KxlVGHqphsHsQ48uK0U3ZX1JczNI7nAuxnn0/lT8ZxswdHET9V3TTo
+y1RwZWiQvSutc/NXIfmTmKHiCjsKITXe2Jruy0P6JBZrylIE4djSy7X4vaKdHn8s
+Metr1S+SjNFE+V9fS2aK+kA87w017V30Uod8l9babKK79q9V1MG5MGivA9Q6To8A
+rIDE/yJHu5D+qBYn3kD1rSgk0THi1lIDQ16PTqzpQXRbqNAqeamsTtD+0CeJ4ixF
+ZJ2+HXogJN0+MmPAl9vmG7alE8Pb7Hj07RajJCxpteNAsOEXB3C5YxtyrljzAxvg
+jVsUZqv/Nf0Hpy0aVupbsy01Z/h7FU1/m+2HGIu6eOey74nFSP5HBHMbLbXNkpde
+xPrPje3h0plSDd9uHccvtA2TFpDJLlXao1v8VKy1lfC1+rrWALhfOvuvgEUAx85S
+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
++xA=
+=NPYy
+-----END PGP PUBLIC KEY BLOCK-----
 
 -------------------------------------------------------------------------------
 Please create your shim binaries starting with the 15.4 shim release tar file:

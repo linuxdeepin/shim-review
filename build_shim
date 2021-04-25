@@ -23,7 +23,10 @@ RELEASEPATH="https://github.com.cnpmjs.org/rhboot/shim/releases/download/15.4/sh
 curl -L $RELEASEPATH | tar -xj || exit 1
 #tar -xjf shim.tar.bz2
 mv shim-15.4 shim
-
+cd shim
+quilt import ../*.patch
+quilt push -a
+cd ..
 
 # Get shim from a repository
 BRANCH=shim-15.4

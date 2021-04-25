@@ -276,8 +276,8 @@ The file 'logs.txt' holds the complete build run
 -------------------------------------------------------------------------------
 Add any additional information you think we may need to validate this shim
 -------------------------------------------------------------------------------
-sha256 hash: fb250586f3f3079fd45e3e673f564e06f70a3ea98b710238428ff3641dcc348c
+sha256 hash: 55c8267a5e1f427a00abae043d07e6228c8807889850e5a03260ba384ce3ee2a
 
-Submission ID: 67c5c30118c3f380f3dcf93ce746926b30fe489b
+Submission ID: 16eeafe28c552bca36953d75581500887631a7f1
 
 Name: Shim 2021-03-C (15.4)

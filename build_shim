@@ -41,7 +41,8 @@ cp $SHIM_DBX shim/
 cd shim
 export VENDOR_CERT_FILE=$CERT
 #export VENDOR_DBX_FILE=$SHIM_DBX
-export DEFAULT_LOADER="\\\\\\\\grubia32.efi"
+#export DEFAULT_LOADER="\\\\\\\\grubia32.efi"
+
 make ARCH=ia32
 
 cp shimia32.efi ../$OUTNAME.efi

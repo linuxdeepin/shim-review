@@ -7,11 +7,11 @@ exec 2>&1
 
 CERT=deepin-uefi-ca.der
 SBAT=sbat.deepin.csv
-OUTNAME=shimx64
+OUTNAME=shimia32
 SHIM_DBX=shim.dbx
 
 rm -rf shim
-rm BOOTX64.EFI
+rm *.EFI
 rm $OUTNAME.efi
 rm $OUTNAME.cab
 rm $OUTNAME.cksum
@@ -41,13 +41,13 @@ cp $SHIM_DBX shim/
 cd shim
 export VENDOR_CERT_FILE=$CERT
 #export VENDOR_DBX_FILE=$SHIM_DBX
-export DEFAULT_LOADER="\\\\\\\\grubx64.efi"
-make ARCH=x86_64
+export DEFAULT_LOADER="\\\\\\\\grubia32.efi"
+make ARCH=ia32
 
-cp shimx64.efi ../$OUTNAME.efi
+cp shimia32.efi ../$OUTNAME.efi
 cd ..
 
 sha256sum -b $OUTNAME.efi > $OUTNAME.cksum
 
-cp $OUTNAME.efi BOOTX64.EFI
-lcab BOOTX64.EFI $OUTNAME.cab
+cp $OUTNAME.efi BOOTIA32.EFI
+lcab BOOTIA32.EFI $OUTNAME.cab

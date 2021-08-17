@@ -4,6 +4,7 @@ sudo docker build -t deepin-shim-review .
 
 id=$(sudo docker create deepin-shim-review)
 sudo docker cp $id:/build/shimx64.efi .
+sudo docker cp $id:/build/shimx64.cab .
 sudo docker rm -v $id
 
 sha256sum -c shimx64.efi.sha256sum

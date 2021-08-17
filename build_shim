@@ -42,7 +42,7 @@ cd shim
 export VENDOR_CERT_FILE=$CERT
 #export VENDOR_DBX_FILE=$SHIM_DBX
 export DEFAULT_LOADER="\\\\\\\\grub.efi"
-make
+make ARCH=x86_64
 
 cp shimx64.efi ../$OUTNAME.efi
 cd ..

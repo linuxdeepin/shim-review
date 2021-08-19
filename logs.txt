@@ -1,17 +1,17 @@
-Sending build context to Docker daemon  7.714MB
+Sending build context to Docker daemon   8.55MB
 Step 1/8 : FROM debian:bullseye
  ---> 9618c05e3686
 Step 2/8 : RUN apt update -y &&     DEBIAN_FRONTEND=noninteractive apt install -y devscripts bsdmainutils gcc git lcab make dos2unix curl bzip2 quilt
- ---> Running in a9334ece763a
+ ---> Running in 33ab2063ec68
 [91m
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-[0mGet:1 http://deb.debian.org/debian bullseye InRelease [113 kB]
-Get:2 http://security.debian.org/debian-security bullseye-security InRelease [44.1 kB]
-Get:3 http://deb.debian.org/debian bullseye-updates InRelease [36.8 kB]
-Get:4 http://security.debian.org/debian-security bullseye-security/main amd64 Packages [25.8 kB]
+[0mGet:1 http://security.debian.org/debian-security bullseye-security InRelease [44.1 kB]
+Get:2 http://deb.debian.org/debian bullseye InRelease [113 kB]
+Get:3 http://security.debian.org/debian-security bullseye-security/main amd64 Packages [25.8 kB]
+Get:4 http://deb.debian.org/debian bullseye-updates InRelease [36.8 kB]
 Get:5 http://deb.debian.org/debian bullseye/main amd64 Packages [8178 kB]
-Fetched 8397 kB in 4s (2019 kB/s)
+Fetched 8397 kB in 4s (2035 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -245,26 +245,26 @@ Get:1 http://deb.debian.org/debian bullseye/main amd64 bsdextrautils amd64 2.36.
 Get:2 http://security.debian.org/debian-security bullseye-security/main amd64 perl-base amd64 5.32.1-4+deb11u1 [1627 kB]
 Get:3 http://deb.debian.org/debian bullseye/main amd64 libcrypt1 amd64 1:4.4.18-4 [87.5 kB]
 Get:4 http://deb.debian.org/debian bullseye/main amd64 libc6 amd64 2.31-13 [2811 kB]
-Get:5 http://deb.debian.org/debian bullseye/main amd64 libuchardet0 amd64 0.0.7-1 [67.8 kB]
-Get:6 http://deb.debian.org/debian bullseye/main amd64 groff-base amd64 1.22.4-6 [936 kB]
-Get:7 http://deb.debian.org/debian bullseye/main amd64 libgdbm6 amd64 1.19-2 [64.9 kB]
-Get:8 http://deb.debian.org/debian bullseye/main amd64 libpipeline1 amd64 1.5.3-1 [34.3 kB]
-Get:9 http://deb.debian.org/debian bullseye/main amd64 man-db amd64 2.9.4-2 [1354 kB]
-Get:10 http://security.debian.org/debian-security bullseye-security/main amd64 perl-modules-5.32 all 5.32.1-4+deb11u1 [2823 kB]
+Get:5 http://security.debian.org/debian-security bullseye-security/main amd64 perl-modules-5.32 all 5.32.1-4+deb11u1 [2823 kB]
+Get:6 http://deb.debian.org/debian bullseye/main amd64 libuchardet0 amd64 0.0.7-1 [67.8 kB]
+Get:7 http://deb.debian.org/debian bullseye/main amd64 groff-base amd64 1.22.4-6 [936 kB]
+Get:8 http://deb.debian.org/debian bullseye/main amd64 libgdbm6 amd64 1.19-2 [64.9 kB]
+Get:9 http://deb.debian.org/debian bullseye/main amd64 libpipeline1 amd64 1.5.3-1 [34.3 kB]
+Get:10 http://deb.debian.org/debian bullseye/main amd64 man-db amd64 2.9.4-2 [1354 kB]
 Get:11 http://deb.debian.org/debian bullseye/main amd64 libgdbm-compat4 amd64 1.19-2 [44.7 kB]
 Get:12 http://deb.debian.org/debian bullseye/main amd64 liblocale-gettext-perl amd64 1.07-4+b1 [19.0 kB]
 Get:13 http://deb.debian.org/debian bullseye/main amd64 libpython3.9-minimal amd64 3.9.2-1 [801 kB]
 Get:14 http://deb.debian.org/debian bullseye/main amd64 libexpat1 amd64 2.2.10-2 [96.9 kB]
 Get:15 http://deb.debian.org/debian bullseye/main amd64 python3.9-minimal amd64 3.9.2-1 [1955 kB]
-Get:16 http://deb.debian.org/debian bullseye/main amd64 python3-minimal amd64 3.9.2-3 [38.2 kB]
-Get:17 http://deb.debian.org/debian bullseye/main amd64 media-types all 4.0.0 [30.3 kB]
-Get:18 http://deb.debian.org/debian bullseye/main amd64 libmpdec3 amd64 2.5.1-1 [87.7 kB]
-Get:19 http://deb.debian.org/debian bullseye/main amd64 libncursesw6 amd64 6.2+20201114-2 [132 kB]
-Get:20 http://deb.debian.org/debian bullseye/main amd64 readline-common all 8.1-1 [73.7 kB]
-Get:21 http://deb.debian.org/debian bullseye/main amd64 libreadline8 amd64 8.1-1 [169 kB]
-Get:22 http://deb.debian.org/debian bullseye/main amd64 libsqlite3-0 amd64 3.34.1-3 [797 kB]
-Get:23 http://deb.debian.org/debian bullseye/main amd64 libpython3.9-stdlib amd64 3.9.2-1 [1684 kB]
-Get:24 http://security.debian.org/debian-security bullseye-security/main amd64 libperl5.32 amd64 5.32.1-4+deb11u1 [4098 kB]
+Get:16 http://security.debian.org/debian-security bullseye-security/main amd64 libperl5.32 amd64 5.32.1-4+deb11u1 [4098 kB]
+Get:17 http://deb.debian.org/debian bullseye/main amd64 python3-minimal amd64 3.9.2-3 [38.2 kB]
+Get:18 http://deb.debian.org/debian bullseye/main amd64 media-types all 4.0.0 [30.3 kB]
+Get:19 http://deb.debian.org/debian bullseye/main amd64 libmpdec3 amd64 2.5.1-1 [87.7 kB]
+Get:20 http://deb.debian.org/debian bullseye/main amd64 libncursesw6 amd64 6.2+20201114-2 [132 kB]
+Get:21 http://deb.debian.org/debian bullseye/main amd64 readline-common all 8.1-1 [73.7 kB]
+Get:22 http://deb.debian.org/debian bullseye/main amd64 libreadline8 amd64 8.1-1 [169 kB]
+Get:23 http://deb.debian.org/debian bullseye/main amd64 libsqlite3-0 amd64 3.34.1-3 [797 kB]
+Get:24 http://deb.debian.org/debian bullseye/main amd64 libpython3.9-stdlib amd64 3.9.2-1 [1684 kB]
 Get:25 http://deb.debian.org/debian bullseye/main amd64 python3.9 amd64 3.9.2-1 [466 kB]
 Get:26 http://deb.debian.org/debian bullseye/main amd64 libpython3-stdlib amd64 3.9.2-3 [21.4 kB]
 Get:27 http://deb.debian.org/debian bullseye/main amd64 python3 amd64 3.9.2-3 [37.9 kB]
@@ -276,26 +276,26 @@ Get:32 http://deb.debian.org/debian bullseye/main amd64 bzip2 amd64 1.0.8-4 [49.
 Get:33 http://deb.debian.org/debian bullseye/main amd64 openssl amd64 1.1.1k-1 [850 kB]
 Get:34 http://deb.debian.org/debian bullseye/main amd64 ca-certificates all 20210119 [158 kB]
 Get:35 http://deb.debian.org/debian bullseye/main amd64 libmagic-mgc amd64 1:5.39-3 [273 kB]
-Get:36 http://deb.debian.org/debian bullseye/main amd64 libmagic1 amd64 1:5.39-3 [126 kB]
-Get:37 http://deb.debian.org/debian bullseye/main amd64 file amd64 1:5.39-3 [69.1 kB]
-Get:38 http://deb.debian.org/debian bullseye/main amd64 gettext-base amd64 0.21-4 [175 kB]
-Get:39 http://deb.debian.org/debian bullseye/main amd64 manpages all 5.10-1 [1412 kB]
-Get:40 http://deb.debian.org/debian bullseye/main amd64 libmd0 amd64 1.0.3-3 [28.0 kB]
-Get:41 http://deb.debian.org/debian bullseye/main amd64 libbsd0 amd64 0.11.3-1 [108 kB]
-Get:42 http://deb.debian.org/debian bullseye/main amd64 libedit2 amd64 3.1-20191231-2+b1 [96.7 kB]
-Get:43 http://deb.debian.org/debian bullseye/main amd64 libcbor0 amd64 0.5.0+dfsg-2 [24.0 kB]
-Get:44 http://deb.debian.org/debian bullseye/main amd64 libfido2-1 amd64 1.6.0-2 [53.3 kB]
-Get:45 http://deb.debian.org/debian bullseye/main amd64 openssh-client amd64 1:8.4p1-5 [929 kB]
-Get:46 http://deb.debian.org/debian bullseye/main amd64 ucf all 3.0043 [74.0 kB]
-Get:47 http://deb.debian.org/debian bullseye/main amd64 xz-utils amd64 5.2.5-2 [220 kB]
-Get:48 http://deb.debian.org/debian bullseye/main amd64 libsigsegv2 amd64 2.13-1 [34.8 kB]
-Get:49 http://deb.debian.org/debian bullseye/main amd64 m4 amd64 1.4.18-5 [204 kB]
-Get:50 http://deb.debian.org/debian bullseye/main amd64 autoconf all 2.69-14 [313 kB]
-Get:51 http://deb.debian.org/debian bullseye/main amd64 autotools-dev all 20180224.1+nmu1 [77.1 kB]
-Get:52 http://deb.debian.org/debian bullseye/main amd64 automake all 1:1.16.3-2 [814 kB]
-Get:53 http://deb.debian.org/debian bullseye/main amd64 autopoint all 0.21-4 [510 kB]
-Get:54 http://deb.debian.org/debian bullseye/main amd64 binutils-common amd64 2.35.2-2 [2220 kB]
-Get:55 http://security.debian.org/debian-security bullseye-security/main amd64 perl amd64 5.32.1-4+deb11u1 [293 kB]
+Get:36 http://security.debian.org/debian-security bullseye-security/main amd64 perl amd64 5.32.1-4+deb11u1 [293 kB]
+Get:37 http://deb.debian.org/debian bullseye/main amd64 libmagic1 amd64 1:5.39-3 [126 kB]
+Get:38 http://deb.debian.org/debian bullseye/main amd64 file amd64 1:5.39-3 [69.1 kB]
+Get:39 http://deb.debian.org/debian bullseye/main amd64 gettext-base amd64 0.21-4 [175 kB]
+Get:40 http://deb.debian.org/debian bullseye/main amd64 manpages all 5.10-1 [1412 kB]
+Get:41 http://deb.debian.org/debian bullseye/main amd64 libmd0 amd64 1.0.3-3 [28.0 kB]
+Get:42 http://deb.debian.org/debian bullseye/main amd64 libbsd0 amd64 0.11.3-1 [108 kB]
+Get:43 http://deb.debian.org/debian bullseye/main amd64 libedit2 amd64 3.1-20191231-2+b1 [96.7 kB]
+Get:44 http://deb.debian.org/debian bullseye/main amd64 libcbor0 amd64 0.5.0+dfsg-2 [24.0 kB]
+Get:45 http://deb.debian.org/debian bullseye/main amd64 libfido2-1 amd64 1.6.0-2 [53.3 kB]
+Get:46 http://deb.debian.org/debian bullseye/main amd64 openssh-client amd64 1:8.4p1-5 [929 kB]
+Get:47 http://deb.debian.org/debian bullseye/main amd64 ucf all 3.0043 [74.0 kB]
+Get:48 http://deb.debian.org/debian bullseye/main amd64 xz-utils amd64 5.2.5-2 [220 kB]
+Get:49 http://deb.debian.org/debian bullseye/main amd64 libsigsegv2 amd64 2.13-1 [34.8 kB]
+Get:50 http://deb.debian.org/debian bullseye/main amd64 m4 amd64 1.4.18-5 [204 kB]
+Get:51 http://deb.debian.org/debian bullseye/main amd64 autoconf all 2.69-14 [313 kB]
+Get:52 http://deb.debian.org/debian bullseye/main amd64 autotools-dev all 20180224.1+nmu1 [77.1 kB]
+Get:53 http://deb.debian.org/debian bullseye/main amd64 automake all 1:1.16.3-2 [814 kB]
+Get:54 http://deb.debian.org/debian bullseye/main amd64 autopoint all 0.21-4 [510 kB]
+Get:55 http://deb.debian.org/debian bullseye/main amd64 binutils-common amd64 2.35.2-2 [2220 kB]
 Get:56 http://deb.debian.org/debian bullseye/main amd64 libbinutils amd64 2.35.2-2 [570 kB]
 Get:57 http://deb.debian.org/debian bullseye/main amd64 libctf-nobfd0 amd64 2.35.2-2 [110 kB]
 Get:58 http://deb.debian.org/debian bullseye/main amd64 libctf0 amd64 2.35.2-2 [53.2 kB]
@@ -636,7 +636,7 @@ Get:392 http://deb.debian.org/debian bullseye/main amd64 strace amd64 5.10-1 [10
 Get:393 http://deb.debian.org/debian bullseye/main amd64 xauth amd64 1:1.1-1 [40.5 kB]
 Get:394 http://deb.debian.org/debian bullseye/main amd64 xdg-user-dirs amd64 0.17-2 [53.8 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 181 MB in 1min 5s (2776 kB/s)
+[0mFetched 181 MB in 58s (3101 kB/s)
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6648 files and directories currently installed.)
 Preparing to unpack .../perl-base_5.32.1-4+deb11u1_amd64.deb ...
 Unpacking perl-base (5.32.1-4+deb11u1) over (5.32.1-3) ...
@@ -2245,22 +2245,22 @@ Updating certificates in /etc/ssl/certs...
 0 added, 0 removed; done.
 Running hooks in /etc/ca-certificates/update.d...
 done.
-Removing intermediate container a9334ece763a
- ---> f36b3ca3f43f
+Removing intermediate container 33ab2063ec68
+ ---> cd68051db3ba
 Step 3/8 : RUN mkdir /build
- ---> Running in c8ece1ec9afd
-Removing intermediate container c8ece1ec9afd
- ---> 76d299eeed16
+ ---> Running in d2069e627840
+Removing intermediate container d2069e627840
+ ---> e99bfa6555c3
 Step 4/8 : COPY . orig
- ---> 24e7e5dbed56
+ ---> 201c52fd9ab8
 Step 5/8 : COPY patches/*.patch build_shim deepin-uefi-ca.der sbat.deepin.csv  /build/
- ---> eb5f1253db31
+ ---> a2cbd1e6b49f
 Step 6/8 : WORKDIR /build
- ---> Running in 6d438b6af78c
-Removing intermediate container 6d438b6af78c
- ---> 7e45ed20d091
+ ---> Running in 31fdd8339a2d
+Removing intermediate container 31fdd8339a2d
+ ---> 6fdcb7e4f032
 Step 7/8 : RUN chmod +x build_shim &&     ./build_shim
- ---> Running in cda7bfde94ed
+ ---> Running in 204326af0a8d
 [91mrm: cannot remove 'build.log': No such file or directory
 [0mrm: cannot remove '*.EF': No such file or directory
 rm: cannot remove '*.efi': No such file or directory
@@ -2268,8 +2268,8 @@ rm: cannot remove '*.cab': No such file or directory
 rm: cannot remove '*.cksum': No such file or directory
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   621  100   621    0     0    981      0 --:--:-- --:--:-- --:--:--   981
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 1230k  100 1230k    0     0   783k      0  0:00:01  0:00:01 --:--:-- 1562k
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   621  100   621    0     0   1129      0 --:--:-- --:--:-- --:--:--  1129
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  4 1230k    4 59936    0     0  34725      0  0:00:36  0:00:01  0:00:35 61535  7 1230k    7 96199    0     0  34829      0  0:00:36  0:00:02  0:00:34 47884  9 1230k    9  119k    0     0  33128      0  0:00:38  0:00:03  0:00:35 41556 11 1230k   11  144k    0     0  31480      0  0:00:40  0:00:04  0:00:36 37471 13 1230k   13  172k    0     0  29883      0  0:00:42  0:00:05  0:00:37 34260 15 1230k   15  194k    0     0  29396      0  0:00:42  0:00:06  0:00:36 27584 16 1230k   16  207k    0     0  26692      0  0:00:47  0:00:07  0:00:40 22361 18 1230k   18  229k    0     0  26239      0  0:00:48  0:00:08  0:00:40 21360 20 1230k   20  246k    0     0  25950      0  0:00:48  0:00:09  0:00:39 20784 21 1230k   21  268k    0     0  25378      0  0:00:49  0:00:10  0:00:39 20010 23 1230k   23  283k    0     0  24715      0  0:00:51  0:00:11  0:00:40 18326 24 1230k   24  301k    0     0  23044      0  0:00:54  0:00:13  0:00:41 17731 25 1230k   25  311k    0     0  23049      0  0:00:54  0:00:13  0:00:41 17210 25 1230k   25  311k    0     0  21493      0  0:00:58  0:00:14  0:00:44 12957 27 1230k   27  333k    0     0  21472      0  0:00:58  0:00:15  0:00:43 13073 28 1230k   28  345k    0     0  21115      0  0:00:59  0:00:16  0:00:43 12633 30 1230k   30  371k    0     0  21061      0  0:00:59  0:00:18  0:00:41 15354 33 1230k   33  413k    0     0  22651      0  0:00:55  0:00:18  0:00:37 21523 51 1230k   51  629k    0     0  32724      0  0:00:38  0:00:19  0:00:19 66933 93 1230k   93 1156k    0     0  57196      0  0:00:22  0:00:20  0:00:02  170k100 1230k  100 1230k    0     0  60625      0  0:00:20  0:00:20 --:--:--  219k
 Importing patch ../Don-t-call-QueryVariableInfo-on-EFI-1.10-machines.patch (stored as patches/Don-t-call-QueryVariableInfo-on-EFI-1.10-machines.patch)
 Importing patch ../MOK-BootServicesData.patch (stored as patches/MOK-BootServicesData.patch)
 Importing patch ../fix-broken-ia32-reloc.patch (stored as patches/fix-broken-ia32-reloc.patch)
@@ -2895,7 +2895,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 4.5862e-05 s, 87.2 kB/s
+4 bytes copied, 2.2563e-05 s, 177 kB/s
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
@@ -2932,7 +2932,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=mmx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 2.7307e-05 s, 146 kB/s
+4 bytes copied, 3.5646e-05 s, 112 kB/s
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame \
@@ -2942,7 +2942,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=fbx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 2.4223e-05 s, 165 kB/s
+4 bytes copied, 3.7643e-05 s, 106 kB/s
 build ia32 shim
 removed 'MokManager.o'
 removed 'PasswordCrypt.o'
@@ -3633,7 +3633,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimia32.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 2.1606e-05 s, 185 kB/s
+4 bytes copied, 2.2535e-05 s, 178 kB/s
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
@@ -3673,7 +3673,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=mmia32.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 3.1556e-05 s, 127 kB/s
+4 bytes copied, 2.6371e-05 s, 152 kB/s
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame \
@@ -3683,7 +3683,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=fbia32.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 2.881e-05 s, 139 kB/s
+4 bytes copied, 2.6299e-05 s, 152 kB/s
 lcab v1.0b12 (2003) by Rien (rien@geekshop.be)
 nopath          : no
 recursive       : no
@@ -3704,15 +3704,15 @@ cabfile         : 920600 bytes (approx. 899.02 Kbytes)
 cfileInit: BOOTX64.EFI localtime:
 tmp,header,folder,.
 done
-Removing intermediate container cda7bfde94ed
- ---> ef8420cfcf43
+Removing intermediate container 204326af0a8d
+ ---> 201d1d03a92b
 Step 8/8 : WORKDIR /
- ---> Running in 1e0e8bc137e5
-Removing intermediate container 1e0e8bc137e5
- ---> c6049217f51b
-Successfully built c6049217f51b
+ ---> Running in 4335bf0345f0
+Removing intermediate container 4335bf0345f0
+ ---> 13e9a7add652
+Successfully built 13e9a7add652
 Successfully tagged deepin-shim-review:latest
-4c4fdb2b403b97a9e4bb06e41d0ea5336aa702a430bd03af5fb4d7bb0f773b97
+73ea0d611e73c5220605d183b30ad963f6ce7cb1360ed434d7a664e8e5cebba1
 shimx64.efi: 成功
 shimia32.efi: 成功
 To remove the container image used for this build: sudo docker image rm deepin-shim-review

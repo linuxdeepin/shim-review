@@ -5,7 +5,7 @@ RUN apt update -y && \
 
 RUN mkdir /build
 COPY . orig
-COPY  patches/*.patch build_shim UOS-UEFI-RSA.cer sbat.uos.csv  /build/
+COPY  patches/*.patch build_shim UOS-UEFI-RSA.der sbat.uos.csv  /build/
     
 WORKDIR /build
 

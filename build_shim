@@ -22,7 +22,7 @@ rm *.cksum
 
 
 # Get shim from a tar file
-RELEASEPATH="https://github.com.cnpmjs.org/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2"
+RELEASEPATH="https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2"
 curl -L $RELEASEPATH | tar -xj || exit 1
 #tar -xjf shim.tar.bz2
 mv shim-15.4 shim

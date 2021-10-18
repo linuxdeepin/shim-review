@@ -22,17 +22,18 @@ rm *.cksum
 
 
 # Get shim from a tar file
-RELEASEPATH="https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2"
+RELEASEPATH="https://github.com/rhboot/shim/releases/download/15.5-rc1/shim-15.5.rc1.tar.bz2"
+
 curl -L $RELEASEPATH | tar -xj || exit 1
 #tar -xjf shim.tar.bz2
-mv shim-15.4 shim
-cd shim
-quilt import ../*.patch
-quilt push -a
-cd ..
+mv shim-15.5~rc1 shim
+#cd shim
+#quilt import ../*.patch
+#quilt push -a
+#cd ..
 
 # Get shim from a repository
-BRANCH=shim-15.4
+BRANCH=shim-15.5
 REPOSITORY="https://github.com/rhboot/shim.git"
 #git clone --recursive -b $BRANCH $REPOSITORY shim
 

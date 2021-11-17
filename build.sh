@@ -18,6 +18,7 @@ elif [ $arch = "aarch64" ];then
 	sudo docker cp $id:/build/shimaa64.efi .
 	sudo docker cp $id:/build/shimaa64.cab .
 	sudo docker cp $id:/build/shimaa64.cksum .
+	sha256sum -c shimaa64.efi.sha256sum
 fi
 
 sudo docker rm -v $id

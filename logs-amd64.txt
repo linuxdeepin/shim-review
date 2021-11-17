@@ -1,8 +1,8 @@
-Sending build context to Docker daemon  7.824MB
+Sending build context to Docker daemon  12.84MB
 Step 1/8 : FROM debian:bullseye
  ---> 9618c05e3686
 Step 2/8 : RUN apt update -y &&     DEBIAN_FRONTEND=noninteractive apt install -y bsdmainutils gcc git lcab make dos2unix curl bzip2 quilt
- ---> Running in b82fc2504b55
+ ---> Running in bcc3bb2f9885
 [91m
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
@@ -12,7 +12,7 @@ Get:3 http://deb.debian.org/debian bullseye InRelease [116 kB]
 Get:4 http://deb.debian.org/debian bullseye-updates InRelease [39.4 kB]
 Get:5 http://deb.debian.org/debian bullseye/main amd64 Packages [8180 kB]
 Get:6 http://deb.debian.org/debian bullseye-updates/main amd64 Packages [2592 B]
-Fetched 8475 kB in 5s (1714 kB/s)
+Fetched 8475 kB in 5s (1792 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -182,7 +182,7 @@ Get:103 http://deb.debian.org/debian bullseye/main amd64 publicsuffix all 202101
 Get:104 http://deb.debian.org/debian bullseye/main amd64 quilt all 0.66-2.1 [319 kB]
 Get:105 http://deb.debian.org/debian bullseye/main amd64 xauth amd64 1:1.1-1 [40.5 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 91.1 MB in 38s (2371 kB/s)
+[0mFetched 91.1 MB in 6s (15.3 MB/s)
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6648 files and directories currently installed.)
 Preparing to unpack .../perl-base_5.32.1-4+deb11u2_amd64.deb ...
 Unpacking perl-base (5.32.1-4+deb11u2) over (5.32.1-3) ...
@@ -614,22 +614,22 @@ Updating certificates in /etc/ssl/certs...
 0 added, 0 removed; done.
 Running hooks in /etc/ca-certificates/update.d...
 done.
-Removing intermediate container b82fc2504b55
- ---> 6e986d170a80
+Removing intermediate container bcc3bb2f9885
+ ---> 020e8e32f8ed
 Step 3/8 : RUN mkdir /build
- ---> Running in 6cbcf0f64c91
-Removing intermediate container 6cbcf0f64c91
- ---> a5a061e7f6b1
+ ---> Running in 959653f8a3f6
+Removing intermediate container 959653f8a3f6
+ ---> 4edfda48c53a
 Step 4/8 : COPY . orig
- ---> ec79dd8697c3
+ ---> 2c75598a060c
 Step 5/8 : COPY  patches/*.patch build_shim UOS-UEFI-RSA.der sbat.uos.csv  /build/
- ---> 29fdb8245638
+ ---> d268a3c086b9
 Step 6/8 : WORKDIR /build
- ---> Running in 520e86df2932
-Removing intermediate container 520e86df2932
- ---> b3a36e332fe7
+ ---> Running in d18723d31a0f
+Removing intermediate container d18723d31a0f
+ ---> e6d98e32bcce
 Step 7/8 : RUN chmod +x build_shim &&     ./build_shim
- ---> Running in 0c7faae43e69
+ ---> Running in ed978cb98725
 [91mrm: cannot remove 'build.log': No such file or directory
 [0mrm: cannot remove '*.EF': No such file or directory
 rm: cannot remove '*.efi': No such file or directory
@@ -637,8 +637,8 @@ rm: cannot remove '*.cab': No such file or directory
 rm: cannot remove '*.cksum': No such file or directory
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   621  100   621    0     0   1036      0 --:--:-- --:--:-- --:--:--  1036
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 87 1230k   87 1074k    0     0   620k      0  0:00:01  0:00:01 --:--:-- 1113k100 1230k  100 1230k    0     0   684k      0  0:00:01  0:00:01 --:--:-- 1195k
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   621  100   621    0     0   1083      0 --:--:-- --:--:-- --:--:--  1083
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 1230k  100 1230k    0     0   837k      0  0:00:01  0:00:01 --:--:-- 1776k
 Importing patch ../Don-t-call-QueryVariableInfo-on-EFI-1.10-machines.patch (stored as patches/Don-t-call-QueryVariableInfo-on-EFI-1.10-machines.patch)
 Importing patch ../MOK-BootServicesData.patch (stored as patches/MOK-BootServicesData.patch)
 Importing patch ../fix-broken-ia32-reloc.patch (stored as patches/fix-broken-ia32-reloc.patch)
@@ -1264,7 +1264,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 5.2471e-05 s, 76.2 kB/s
+4 bytes copied, 3.3635e-05 s, 119 kB/s
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
@@ -1301,7 +1301,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=mmx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 3.3999e-05 s, 118 kB/s
+4 bytes copied, 2.4868e-05 s, 161 kB/s
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame \
@@ -1311,7 +1311,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=fbx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 2.8622e-05 s, 140 kB/s
+4 bytes copied, 2.0345e-05 s, 197 kB/s
 build ia32 shim
 removed 'MokManager.o'
 removed 'PasswordCrypt.o'
@@ -2002,7 +2002,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimia32.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 2.4028e-05 s, 166 kB/s
+4 bytes copied, 3.7956e-05 s, 105 kB/s
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
@@ -2042,7 +2042,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=mmia32.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 4.0019e-05 s, 100 kB/s
+4 bytes copied, 3.741e-05 s, 107 kB/s
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame \
@@ -2052,7 +2052,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=fbia32.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 3.7058e-05 s, 108 kB/s
+4 bytes copied, 3.9758e-05 s, 101 kB/s
 lcab v1.0b12 (2003) by Rien (rien@geekshop.be)
 nopath          : no
 recursive       : no
@@ -2073,15 +2073,15 @@ cabfile         : 920600 bytes (approx. 899.02 Kbytes)
 cfileInit: BOOTX64.EFI localtime:
 tmp,header,folder,.
 done
-Removing intermediate container 0c7faae43e69
- ---> df8e5d40d073
+Removing intermediate container ed978cb98725
+ ---> bd41edad8745
 Step 8/8 : WORKDIR /
- ---> Running in 50e0246f589e
-Removing intermediate container 50e0246f589e
- ---> 2b8cf6895e7f
-Successfully built 2b8cf6895e7f
+ ---> Running in 4a27f55a7170
+Removing intermediate container 4a27f55a7170
+ ---> c081ba990654
+Successfully built c081ba990654
 Successfully tagged uos-shim-review:latest
 shimx64.efi: 成功
 shimia32.efi: 成功
-fb97dc7d3f4652c889953d9bfe0fe9fd936c62c99e9dddabc5ca1411eaf42689
+bc94f0d78be2ebc804037be0712fec37c9fee8e633c4dad0fca1aab0b5e3d4ce
 To remove the container image used for this build: sudo docker image rm uos-shim-review

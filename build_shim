@@ -8,10 +8,8 @@ exec 2>&1
 CERT=UOS-UEFI-RSA.der
 SBAT=sbat.uos.csv
 OUTNAMEX64=shimx64
-OUTNAMEIA32=shimia32
 SHIM_DBX=shim.dbx
 BOOTX64EFI=BOOTX64.EFI
-BOOTIA32EFI=BOOTIA32.EFI
 # aarch64
 OUTNAMEAA64=shimaa64
 BOOTAA64EFI=BOOTAA64.EFI
@@ -25,17 +23,12 @@ rm *.cksum
 
 
 # Get shim from a tar file
-RELEASEPATH="https://github.com/rhboot/shim/releases/download/15.5-rc1/shim-15.5.rc1.tar.bz2"
+RELEASEPATH="https://github.com/rhboot/shim/releases/download/15.6/shim-15.6.tar.bz2"
+
 
 curl -L $RELEASEPATH | tar -xj || exit 1
 #tar -xjf shim.tar.bz2
-mv shim-15.5~rc1 shim
-
-# Get shim from a repository
-BRANCH=shim-15.5
-REPOSITORY="https://github.com/rhboot/shim.git"
-#git clone --recursive -b $BRANCH $REPOSITORY shim
-
+mv shim-15.6 shim
 
 cp $CERT shim/
 cp $SBAT shim/data/
@@ -59,15 +52,9 @@ case `uname -m` in
 		echo "build x86_64 shim"
 		build x86_64
 		cp shimx64.efi ../$OUTNAMEX64.efi
-		echo "build ia32 shim"
-		build ia32
-		cp shimia32.efi ../$OUTNAMEIA32.efi
 		cd ..
 		sha256sum -b $OUTNAMEX64.efi > $OUTNAMEX64.cksum
-		sha256sum -b $OUTNAMEIA32.efi > $OUTNAMEIA32.cksum
 		cp $OUTNAMEX64.efi $BOOTX64EFI
-		cp $OUTNAMEIA32.efi $BOOTIA32EFI
-		lcab $BOOTIA32EFI $OUTNAMEIA32.cab
 		lcab $BOOTX64EFI $OUTNAMEX64.cab
 		;;
 	aarch64)
@@ -80,7 +67,7 @@ case `uname -m` in
 		lcab $BOOTAA64EFI $OUTNAMEAA64.cab
 		;;
 	*)
-		echo "暂不支持该CPU架构"
+		echo "This CPU architecture is not currently supported"
 		exit 1
 esac
 

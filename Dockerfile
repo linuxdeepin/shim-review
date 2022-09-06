@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bookworm-20220711
 
 RUN apt update -y && \
     DEBIAN_FRONTEND=noninteractive apt install -y bsdmainutils gcc git lcab make dos2unix curl bzip2 quilt

@@ -215,6 +215,7 @@ grub:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,1,Free Software Foundation,grub,2.04,https://www.gnu.org/software/grub/
+grub.debian,1,Debian,grub2,2.04-17,https://tracker.debian.org/pkg/grub2
 grub.uos,2,Uos,grub2,2.04.25-18,mail:secureboot@uniontech.com
 ```
 -------------------------------------------------------------------------------
